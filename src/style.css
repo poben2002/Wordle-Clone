@@ -1,0 +1,100 @@
+html, body {
+    background: var(--default);
+}
+
+:root {
+    --default: #121213;
+    --blank: #3a3a3c;
+    --wrongspot: #b59f3b;
+    --correct: #538d4e;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.box {
+    width : 60px;
+    height : 60px;
+    border : 2px solid var(--blank);
+    margin : 4px;
+    display : grid;
+    place-items : center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+    color : white
+}
+
+.box.blank {
+    background-color: var(--blank);
+}
+
+.box.wrongspot {
+    background-color: var(--wrongspot);
+}
+
+.box.correct {
+    background-color: var(--correct);
+}
+
+.animated {
+    animation: flip 0.5s ease;
+  }
+
+@keyframes flip {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .title-word-clone {
+    position: absolute;
+    left: calc(50% + 75px);
+    transform: rotate(25deg);
+    color: yellow;
+    font-size: 1.2rem;
+  }
+
+  hr {
+    border-style: solid;
+    border-color: var(--empty);
+    border-width: 1px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .v-separator {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+#wGame {
+    width : 100%;
+    height : 600px;
+    display: grid;
+    place-items: center;
+}
